@@ -1,0 +1,121 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+header {
+  background-color: black;
+}
+
+.back-tral {
+  transition: opacity 0.3s, filter 0.3s;
+  background: url('tralalar.png') center/contain no-repeat;
+  text-align: center;
+  padding: 4rem 1rem;
+  height: 300px;
+  border-bottom: 2px solid white;
+  
+  
+}
+
+.back-tral h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.673);
+  
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+#search-input {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 2px solid blue;
+  border-radius: 4px;
+}
+
+#search-btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  background-color: red;
+  color: white;
+  border: solid 2px black;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.movie-card {
+  background-color:lightslategray;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px black;
+  text-align: center;
+  cursor: grabbing;
+  transition: transform 0.2s ease-in-out;
+}
+.movie-card:hover {
+  transform: scale(1.10);
+}
+.movie-card img {
+  width: 100%;
+  height: auto;
+}
+.movie-card h3 {
+  font-size: 1rem;
+  margin: 0.5rem;
+  color: white;
+}
+.movie-card p {
+  font-size: 0.875rem;
+  color:  whitesmoke;
+  margin: 0.2rem 0;
+}
+
+#modal.hidden {
+  display: none;
+}
+#modal {
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+}
+.modal-content {
+  background: black;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 60%;
+  max-height: 80%;
+  overflow-y: auto;
+  color: white;
+  position: relative;
+}
+.close-btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.5rem;
+  cursor: grabbing;
+  color: white;
+}
